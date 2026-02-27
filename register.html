@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Pengguna</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Form Pendaftaran Pengguna</h2>
+
+    <form onsubmit="daftar(event)">
+
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" class="input">
+
+        <label>Kios</label>
+        <input type="text" id="kios" class="input">
+
+        <label>NIK</label>
+        <input type="text" id="nik" class="input">
+
+        <label>Nomor Telephone</label>
+        <input type="text" id="telepon" class="input">
+
+        <label>Email</label>
+        <input type="email" id="email" class="input">
+
+        <label>Username</label>
+        <input type="text" id="usernameDaftar" class="input">
+
+        <label>Password</label>
+        <input type="password" id="passwordDaftar" class="input">
+
+        <label>Role</label>
+        <input type="text" value="Pengguna" readonly class="input">
+
+        <button type="submit" class="btn">Daftar</button>
+
+    </form>
+
+    <br>
+
+    <a href="index.html">
+        <button class="btn-secondary">Kembali</button>
+    </a>
+
+</div>
+
+</body>
+</html>

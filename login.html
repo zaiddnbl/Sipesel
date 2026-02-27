@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Login Sistem Pajak</h2>
+
+    <form onsubmit="login(event)">
+
+        <label>Username</label>
+        <input type="text" id="username" class="input">
+
+        <label>Password</label>
+        <input type="password" id="password" class="input">
+
+        <label>Role</label>
+        <select id="role" class="input">
+
+            <option value="">Pilih Role</option>
+            <option value="pengguna">Pengguna</option>
+            <option value="admin">Admin</option>
+            <option value="pengawas">Pengawas</option>
+
+        </select>
+
+        <button type="submit" class="btn">Login</button>
+
+    </form>
+
+    <!-- NOTE REGISTER -->
+    <p style="text-align:center; margin-top:15px;">
+        Belum punya akun?
+        <a href="daftar.html">Daftar di sini</a>
+    </p>
+
+    <br>
+
+    <a href="index.html">
+        <button class="btn-secondary">Kembali</button>
+    </a>
+
+</div>
+
+</body>
+</html>
