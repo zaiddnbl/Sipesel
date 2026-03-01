@@ -3,40 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Pengguna</title>
-
     <link rel="stylesheet" href="css/style.css">
-
     <script src="js/script.js"></script>
 </head>
-<body>
+<body class="windows-bg">
 
-<div class="container">
+<div class="window">
 
-    <h1>Dashboard Pengguna</h1>
-
-    <p>Selamat datang di sistem pembayaran pajak kios.</p>
-
-    <div class="button-group">
-
-        <button onclick="lihatTagihan()" class="btn">
-            Lihat Tagihan Pajak
-        </button>
-
-        <button onclick="bayarPajak()" class="btn">
-            Bayar Pajak
-        </button>
-
-        <button onclick="riwayat()" class="btn">
-            Cek Riwayat Pajak
-        </button>
-
+    <!-- Top Bar -->
+    <div class="topbar">
+        <span>Sistem Pajak Kios</span>
+        <div class="window-buttons">
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+            <div class="circle green"></div>
+        </div>
     </div>
 
-    <br>
+    <div class="main">
 
-    <a href="index.html">
-        <button class="btn-secondary">Logout</button>
-    </a>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <button onclick="lihatTagihan()">📄 Tagihan</button>
+            <button onclick="bayarPajak()">💳 Bayar</button>
+            <button onclick="riwayat()">📊 Riwayat</button>
+            <a href="index.html"><button class="logout">🚪 Logout</button></a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <h2>Dashboard Pengguna</h2>
+            <p>Selamat datang di sistem pembayaran pajak kios.</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h4>Total Tagihan</h4>
+                    <p>Rp 1.500.000</p>
+                </div>
+
+                <div class="stat-card">
+                    <h4>Status</h4>
+                    <p>Belum Lunas</p>
+                </div>
+
+                <div class="stat-card">
+                    <h4>Terakhir Bayar</h4>
+                    <p>12 Januari 2026</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
