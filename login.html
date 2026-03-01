@@ -45,7 +45,9 @@
 <script>
 function login(event){
     event.preventDefault();
-    alert("Login berhasil (dummy)");
+
+    localStorage.setItem("loginSuccess", "true");
+    window.location.href = "dashboard.html";
 }
 </script>
 

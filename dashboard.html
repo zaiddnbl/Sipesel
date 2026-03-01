@@ -8,57 +8,36 @@
 </head>
 <body class="windows-bg">
 
-<div class="window">
+<body class="dashboard-bg">
 
-    <!-- Top Bar -->
-    <div class="topbar">
-        <span>Sistem Pajak Kios</span>
-        <div class="window-buttons">
-            <div class="circle red"></div>
-            <div class="circle yellow"></div>
-            <div class="circle green"></div>
+    <!-- NAVBAR -->
+    <nav class="dashboard-nav">
+        <div class="logo">SIPESEL</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tagihan</a></li>
+            <li><a href="#">Riwayat</a></li>
+            <li><a href="index.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sistem Pembayaran Pajak Kios</h1>
+            <p>Kelola dan bayar pajak kios Anda dengan mudah dan cepat.</p>
+            <button onclick="lihatTagihan()">Lihat Tagihan</button>
         </div>
-    </div>
+    </section>
 
-    <div class="main">
-
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h3>Menu</h3>
-            <button onclick="lihatTagihan()">📄 Tagihan</button>
-            <button onclick="bayarPajak()">💳 Bayar</button>
-            <button onclick="riwayat()">📊 Riwayat</button>
-            <a href="index.html"><button class="logout">🚪 Logout</button></a>
-        </div>
-
-        <!-- Content -->
-        <div class="content">
-
-            <h2>Dashboard Pengguna</h2>
-            <p>Selamat datang di sistem pembayaran pajak kios.</p>
-
-            <div class="stats">
-                <div class="stat-card">
-                    <h4>Total Tagihan</h4>
-                    <p>Rp 1.500.000</p>
-                </div>
-
-                <div class="stat-card">
-                    <h4>Status</h4>
-                    <p>Belum Lunas</p>
-                </div>
-
-                <div class="stat-card">
-                    <h4>Terakhir Bayar</h4>
-                    <p>12 Januari 2026</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
+</body>
+<script>
+window.onload = function() {
+    if(localStorage.getItem("loginSuccess") === "true"){
+        alert("Login berhasil 🎉 Selamat datang di Dashboard!");
+        localStorage.removeItem("loginSuccess");
+    }
+}
+</script>
 </body>
 </html>

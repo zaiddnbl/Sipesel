@@ -6,6 +6,7 @@
     <title>Register SIPESEL</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <div class="register-container">
@@ -24,10 +25,10 @@
 
             <h2>Form Pendaftaran</h2>
 
-            <form>
+            <form id="registerForm">
 
                 <div class="input-group">
-                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="text" id="nama" placeholder="Nama Lengkap" required>
                 </div>
 
                 <div class="input-group">
@@ -86,6 +87,48 @@
     </div>
 
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
+    const form = document.getElementById("registerForm");
+    const namaInput = document.getElementById("nama");
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        // VALIDASI NAMA (huruf, angka, spasi, petik saja)
+        const regexNama = /^[a-zA-Z0-9' ]+$/;
+
+        if (!regexNama.test(namaInput.value)) {
+            alert("Nama hanya boleh huruf, angka, spasi dan tanda petik (')!");
+            namaInput.focus();
+            return;
+        }
+
+        const inputs = form.querySelectorAll("input");
+        let lengkap = true;
+
+        inputs.forEach(input => {
+            if(input.type !== "radio" && input.value.trim() === ""){
+                lengkap = false;
+            }
+        });
+
+        const gender = form.querySelector('input[name="gender"]:checked');
+
+        if(!lengkap || !gender){
+            alert("Form harus diisi semua! ⚠️");
+            return;
+        }
+
+        alert("Berhasil daftar 🎉");
+
+        setTimeout(function(){
+            window.location.href = "login.html";
+        }, 1500);
+    });
+
+});
+</script>
 </body>
 </html>
