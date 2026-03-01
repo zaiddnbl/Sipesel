@@ -2,53 +2,52 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login SIPESEL</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/script.js"></script>
 </head>
-<body>
 
-<div class="container">
+<body class="login-bg">
 
-    <h2>Login Sistem Pajak</h2>
+<div class="login-wrapper">
 
-    <form onsubmit="login(event)">
+    <!-- LOGO -->
+    <div class="logo-box">
+        <img src="images/logo-sipesel.png" alt="Logo SIPESEL">
+    </div>
 
-        <label>Username</label>
-        <input type="text" id="username" class="input">
+    <h2 class="login-title">LOGIN</h2>
 
-        <label>Password</label>
-        <input type="password" id="password" class="input">
+    <form onsubmit="login(event)" class="login-form">
 
-        <label>Role</label>
-        <select id="role" class="input">
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username" required>
+        </div>
 
-            <option value="">Pilih Role</option>
-            <option value="pengguna">Pengguna</option>
-            <option value="admin">Admin</option>
-            <option value="pengawas">Pengawas</option>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
 
-        </select>
+        <button type="submit" class="login-btn">
+            LOGIN
+        </button>
 
-        <button type="submit" class="btn">Login</button>
+        <!-- Tulisan kecil daftar -->
+        <p class="register-text">
+            Belum punya akun? 
+            <a href="register.html">Daftar di sini</a>
+        </p>
 
     </form>
 
-    <!-- NOTE REGISTER -->
-    <p style="text-align:center; margin-top:15px;">
-        Belum punya akun?
-        <a href="daftar.html">Daftar di sini</a>
-    </p>
-
-    <br>
-
-    <a href="index.html">
-        <button class="btn-secondary">Kembali</button>
-    </a>
-
 </div>
+
+<script>
+function login(event){
+    event.preventDefault();
+    alert("Login berhasil (dummy)");
+}
+</script>
 
 </body>
 </html>

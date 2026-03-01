@@ -2,53 +2,88 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Daftar Pengguna</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register SIPESEL</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/script.js"></script>
 </head>
 <body>
 
-<div class="container">
+<div class="register-container">
 
-    <h2>Form Pendaftaran Pengguna</h2>
+    <!-- LEFT SIDE (IMAGE) -->
+    <div class="register-left">
+        <div class="overlay">
+            <h1>SIPESEL</h1>
+            <p>Sistem Pengelolaan Sewa Kios</p>
+        </div>
+    </div>
 
-    <form onsubmit="daftar(event)">
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="register-right">
+        <div class="register-card">
 
-        <label>Nama Lengkap</label>
-        <input type="text" id="nama" class="input">
+            <h2>Form Pendaftaran</h2>
 
-        <label>Kios</label>
-        <input type="text" id="kios" class="input">
+            <form>
 
-        <label>NIK</label>
-        <input type="text" id="nik" class="input">
+                <div class="input-group">
+                    <input type="text" placeholder="Nama Lengkap" required>
+                </div>
 
-        <label>Nomor Telephone</label>
-        <input type="text" id="telepon" class="input">
+                <div class="input-group">
+                    <input type="text" placeholder="Kios" required>
+                </div>
 
-        <label>Email</label>
-        <input type="email" id="email" class="input">
+                <div class="input-group">
+                    <input type="text" placeholder="NIK" required>
+                </div>
 
-        <label>Username</label>
-        <input type="text" id="usernameDaftar" class="input">
+                <div class="input-group">
+                    <input type="text" placeholder="Nomor Telepon" required>
+                </div>
 
-        <label>Password</label>
-        <input type="password" id="passwordDaftar" class="input">
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
 
-        <label>Role</label>
-        <input type="text" value="Pengguna" readonly class="input">
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
 
-        <button type="submit" class="btn">Daftar</button>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
 
-    </form>
+                <!-- CUSTOM RADIO -->
+                <div class="gender-group">
+                    <label>Gender</label>
+                    <div class="radio-wrapper">
+                        <label class="custom-radio">
+                            <input type="radio" name="gender" value="Laki-laki" required>
+                            <span class="radio-mark"></span>
+                            Laki-laki
+                        </label>
 
-    <br>
+                        <label class="custom-radio">
+                            <input type="radio" name="gender" value="Perempuan">
+                            <span class="radio-mark"></span>
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
 
-    <a href="index.html">
-        <button class="btn-secondary">Kembali</button>
-    </a>
+                <button type="submit" class="register-btn">
+                    DAFTAR
+                </button>
+
+            </form>
+
+        </div>
+        <div class="login-link">
+    Sudah punya akun?
+    <a href="login.html">Login sekarang</a>
+</div>
+    </div>
 
 </div>
 
